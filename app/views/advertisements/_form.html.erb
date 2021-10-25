@@ -1,0 +1,43 @@
+<%= form_with(model: advertisement) do |form| %>
+  <% if advertisement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(advertisement.errors.count, "error") %> prohibited this advertisement from being saved:</h2>
+
+      <ul>
+        <% advertisement.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <% form.label :title %>
+    <%= form.text_field :title, class:"form-control", placeholder:"Enter title "%>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :desc %>
+    <%= form.text_field :desc, class:"form-control", placeholder:"Enter Description "%>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :phone %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"Enter Contact Details "%>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :others %>
+    <%= form.text_field :others,class:"form-control", placeholder:"Enter Other Details "%>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :user_id %>
+    <%= form.number_field :user_id,id: :advertisement_user_id,type: :hidden,class:"form-control", value:current_user.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

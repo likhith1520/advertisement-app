@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+  <h1 class="text-center">My Advertisements</h1><hr>
+
+
+  <% @advertisements.each do |advertisement| %>
+    <% if advertisement.user == current_user %> 
+    <div class="card"> 
+      <div class="card-body">
+        <p><span class="fw-bold"> Title : </span> <%= advertisement.title %></p>
+        <p><span class="fw-bold"> Description : </span> <%= advertisement.desc %></p>
+        <p><span class="fw-bold"> Contact Details : </span> <%= advertisement.phone %></p>
+        <p><span class="fw-bold"> User Id : </span> <%= advertisement.user_id %> </p>
+        
+        <p><%= link_to 'View/Add Comments', advertisement, class:"btn btn-info" %> 
+
+        <% if advertisement.user ==  current_user %>
+          <%= link_to 'Edit', edit_advertisement_path(advertisement), class:"btn btn-secondary" %>
+          <%= link_to 'Delete', advertisement, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+
+  <% end %>
+
+<%= link_to 'New Advertisement', new_advertisement_path, class:"btn btn-primary" %>

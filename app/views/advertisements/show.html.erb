@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @advertisement.title %></h1>
+  <p class="lead">Description : <%= @advertisement.desc %></p>
+  <p class="lead">Phone Number : <%= @advertisement.phone %></p>
+  <p>Other Details : <%= @advertisement.others %></p>
+  <%= link_to 'Back', advertisements_path, class:"btn btn-secondary" %> 
+  <br><br>
+  <div>
+      <h5> Comments </h5>
+      <br>
+     
+      <p> <%= render @advertisement.comments %> </p>
+
+      <p> Add Comment </p>
+      <%= render 'comments/form' %>
+  </div>
+</div>
+
