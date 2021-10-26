@@ -1,24 +1,71 @@
-# README
+# Advertisement Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Functionalities
 
-Things you may want to cover:
+* User Registration 
+* User Login 
+* Edit profile
+* CRUD operations like 
+  - User can publish advertisements
+  - User can edit advertisements published by them
+  - User can delete advertisements published by them
+  - User can comment on advertisements published by any user
 
-* Ruby version
+## Tools and Technologies
 
-* System dependencies
+* Technology: HTML, CSS, Ruby on Rails, Bootstrap
+* Database: sqlite3(for developement), PostgreSQL(for production)
 
-* Configuration
+## Information about the web application
 
-* Database creation
+* Home tab - contains home page
+* About tab - contains information about the web application
 
-* Database initialization
+### Before user sign in into their account (Navigation bar information)
 
-* How to run the test suite
+* Advertisements tab
+  * User can advertisements posted by all the users
+  * User can post comments on the advertisements
+  * To post a comment user need to login into their account
+* Login tab
+  * User need to enter email id and password to login into their account
+* Register tab
+  * User need to fill the details in order to create an account
 
-* Services (job queues, cache servers, search engines, etc.)
+### After user sign in into their account (Navigation bar information)
 
-* Deployment instructions
+* View Advertisements tab
+  * User can see advertisements posted by all the users.
+  * User can see edit and delete option only to the advertisements posted by them, for all other advertisements they can only write comments.
+  * Comments can be posted by clicking on View/Add comments button.
+* My Advertisements tab 
+  * User can only see the advertisements posted by them.
+  * User can edit, delete their advertisements here.
+* Add Advertisement tab
+  * User can publish new advertisement.
+* Edit profile tab
+  * User can update their profile here by filling the details.
+* Sign out tab
+  * User can log out from their account.
 
-* ...
+## Getting started
+
+To get started with the app, clone the repo and then install the needed gems:
+
+```
+$ bundle install --without production
+```
+
+Next, migrate the database:
+
+```
+$ rails db:migrate
+```
+
+You'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+
