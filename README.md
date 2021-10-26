@@ -1,5 +1,7 @@
 # Advertisement Web Application
 
+Visit the site : https://railsadsapp.herokuapp.com/
+
 ## Functionalities
 
 * User Registration 
