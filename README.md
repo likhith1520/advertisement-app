@@ -17,6 +17,7 @@ Visit the site : https://railsadsapp.herokuapp.com/
 
 * Technology: HTML, CSS, Ruby on Rails, Bootstrap
 * Database: sqlite3(for developement), PostgreSQL(for production)
+* Tools: Visual Studio Code
 
 ## Information about the web application
 
