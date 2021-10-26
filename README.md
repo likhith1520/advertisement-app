@@ -11,7 +11,7 @@ Visit the site : https://railsadsapp.herokuapp.com/
   - User can publish advertisements
   - User can edit advertisements published by them
   - User can delete advertisements published by them
-  - User can comment on advertisements published by any user
+  - User can comment on advertisements published by any other user
 
 ## Tools and Technologies
 
@@ -26,7 +26,7 @@ Visit the site : https://railsadsapp.herokuapp.com/
 ### Before user sign in into their account (Navigation bar information)
 
 * Advertisements tab
-  * User can advertisements posted by all the users
+  * User can see advertisements posted by all the users
   * User can post comments on the advertisements
   * To post a comment user need to login into their account
 * Login tab
